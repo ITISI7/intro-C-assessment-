@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\7319d\\source\\repos\\IntroAssessment\\IntroAssessment\\IntroAssessment.csproj",
+      "projectUniqueName": "C:\\Users\\7319d\\Source\\Repos\\intro-C-assessment-\\IntroAssessment\\IntroAssessment\\IntroAssessment.csproj",
       "projectName": "IntroAssessment",
-      "projectPath": "C:\\Users\\7319d\\source\\repos\\IntroAssessment\\IntroAssessment\\IntroAssessment.csproj",
+      "projectPath": "C:\\Users\\7319d\\Source\\Repos\\intro-C-assessment-\\IntroAssessment\\IntroAssessment\\IntroAssessment.csproj",
       "packagesPath": "C:\\Users\\7319d\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\7319d\\source\\repos\\IntroAssessment\\IntroAssessment\\obj\\",
+      "outputPath": "C:\\Users\\7319d\\Source\\Repos\\intro-C-assessment-\\IntroAssessment\\IntroAssessment\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\7319d\\AppData\\Roaming\\NuGet\\NuGet.Config",
