@@ -8,6 +8,7 @@ namespace IntroAssessment
     {
         protected int damage;
         protected int weight;
+        string[] weaponArray = new string[] { "iron sword", "steel sword" };
         
     }
 }

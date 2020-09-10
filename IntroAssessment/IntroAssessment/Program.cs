@@ -17,16 +17,30 @@ namespace IntroAssessment
             {
                
                 string command = Console.ReadLine();
-                if(command == "buy")
+                // Player Input 
+                if (command == "buy")
                 {
                     Console.WriteLine("what would you like to buy?");
                 }
-                if(command == "sell")
+                else if (command == "sell")
                 {
                     Console.WriteLine("what would you like to sell?");
+
                 }
-                
-            }
-        }
+                else if (command == "leave")
+                {
+                    Console.WriteLine("do come again");
+                    gameover = true;
+
+
+                }
+                // if player type anything that not in the game
+                else
+                {
+                    Console.WriteLine("invadle");
+                }
+
+              }
+          }
     }
 }
