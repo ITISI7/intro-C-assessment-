@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "3ffs71m+jGB8EcR3ZD0ZfUIKzIm25e+O6j+eM36Q38cyJBXhZ6Bv7d7NjibF4iHeFWByCtPVHsihiN4n3rYPvQ==",
+  "dgSpecHash": "cMdG4Yslg1s/KbJpzuIZyfeUjj7vbZFnEMbEenKV8jsUY6i5FhFyuwuiT/WZOlH305Ti+X6//iYqj2eUsWLQMw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\7319d\\source\\repos\\intro-C-assessment-\\IntroAssessment\\IntroAssessment\\IntroAssessment.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\7319d\\Source\\Repos\\intro-C-assessment-\\IntroAssessment\\IntroAssessment\\IntroAssessment.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\7319d\\.nuget\\packages\\csvhelper\\15.0.5\\csvhelper.15.0.5.nupkg.sha512",
+    "C:\\Users\\7319d\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512"
+  ],
   "logs": []
 }

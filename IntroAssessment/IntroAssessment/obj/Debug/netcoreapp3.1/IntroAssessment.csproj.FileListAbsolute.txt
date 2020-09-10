@@ -7,7 +7,9 @@ C:\Users\7319d\source\repos\intro-C-assessment-\IntroAssessment\IntroAssessment\
 C:\Users\7319d\source\repos\intro-C-assessment-\IntroAssessment\IntroAssessment\obj\Debug\netcoreapp3.1\IntroAssessment.csprojAssemblyReference.cache
 C:\Users\7319d\source\repos\intro-C-assessment-\IntroAssessment\IntroAssessment\obj\Debug\netcoreapp3.1\IntroAssessment.AssemblyInfoInputs.cache
 C:\Users\7319d\source\repos\intro-C-assessment-\IntroAssessment\IntroAssessment\obj\Debug\netcoreapp3.1\IntroAssessment.AssemblyInfo.cs
-C:\Users\7319d\source\repos\intro-C-assessment-\IntroAssessment\IntroAssessment\obj\Debug\netcoreapp3.1\IntroAssessment.csproj.CoreCompileInputs.cache
 C:\Users\7319d\source\repos\intro-C-assessment-\IntroAssessment\IntroAssessment\obj\Debug\netcoreapp3.1\IntroAssessment.dll
 C:\Users\7319d\source\repos\intro-C-assessment-\IntroAssessment\IntroAssessment\obj\Debug\netcoreapp3.1\IntroAssessment.pdb
 C:\Users\7319d\source\repos\intro-C-assessment-\IntroAssessment\IntroAssessment\obj\Debug\netcoreapp3.1\IntroAssessment.genruntimeconfig.cache
+C:\Users\7319d\Source\Repos\intro-C-assessment-\IntroAssessment\IntroAssessment\bin\Debug\netcoreapp3.1\CsvHelper.dll
+C:\Users\7319d\Source\Repos\intro-C-assessment-\IntroAssessment\IntroAssessment\obj\Debug\netcoreapp3.1\IntroAssessment.csproj.CoreCompileInputs.cache
+C:\Users\7319d\Source\Repos\intro-C-assessment-\IntroAssessment\IntroAssessment\obj\Debug\netcoreapp3.1\IntroAssessment.csproj.CopyComplete

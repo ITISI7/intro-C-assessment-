@@ -2,15 +2,44 @@
 using System.Threading;
 using System.IO;
 using System.Net.NetworkInformation;
+using CsvHelper;
+using System.Globalization;
+using System.Linq;
+
 
 namespace IntroAssessment
 {
+    struct ShopWeaponsInv
+    {
+        string name;
+        int price;
+        int selling;
+        int damage;
+        int weight;
+        
+        public string Name { get => name; set => name = value; }
+        public int Price { get => price; set => price = value; }
+        public int Selling { get => selling; set => selling = value; }
+        public int Damage { get => damage; set => damage = value; }
+        public int Weight { get => weight; set => weight = value; }
+
+        
+    }
     class Program
     {
         static void Main(string[] args)
         {
+            ShopWeaponsInv[] WeaponInShop;
+            using (var reader = new StreamReader("Weapons.csv"))
+            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
+            {
+                System.Collections.Generic.IEnumerable<ShopWeaponsInv> records =
+                 csv.GetRecords<ShopWeaponsInv>();
+                WeaponInShop = records.ToArray<ShopWeaponsInv>();
+            }
 
-            Console.WriteLine("Weclome to my shop, what would you like to do?");
+
+                Console.WriteLine("Weclome to my shop, what would you like to do?");
             bool gameover = false;
             // Game Loop
             while(!gameover)
@@ -21,6 +50,11 @@ namespace IntroAssessment
                 if (command == "buy")
                 {
                     Console.WriteLine("what would you like to buy?");
+                    foreach(ShopWeaponsInv tmp in WeaponInShop)
+                    {
+                        Console.WriteLine(tmp);
+                    }
+
                 }
                 else if (command == "sell")
                 {
