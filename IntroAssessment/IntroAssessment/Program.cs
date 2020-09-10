@@ -13,13 +13,11 @@ namespace IntroAssessment
     {
         string name;
         int price;
-        int selling;
         int damage;
         int weight;
         
         public string Name { get => name; set => name = value; }
         public int Price { get => price; set => price = value; }
-        public int Selling { get => selling; set => selling = value; }
         public int Damage { get => damage; set => damage = value; }
         public int Weight { get => weight; set => weight = value; }
 
@@ -52,7 +50,7 @@ namespace IntroAssessment
                     Console.WriteLine("what would you like to buy?");
                     foreach(ShopWeaponsInv tmp in WeaponInShop)
                     {
-                        Console.WriteLine(tmp);
+                        Console.WriteLine(tmp.Name);
                     }
 
                 }
