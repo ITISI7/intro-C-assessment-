@@ -6,6 +6,7 @@ using CsvHelper;
 using System.Globalization;
 using System.Linq;
 using System.Collections.Generic;
+using System.Buffers;
 
 namespace IntroAssessment
 {
@@ -53,7 +54,7 @@ namespace IntroAssessment
             Player player = new Player();
 
 
-            Console.WriteLine("Weclome to my shop, what would you like to do?");
+            Console.WriteLine("Weclome to my shop, what would you like to do?\nbuy \nsell \nleave");
             bool menu = true;
             bool shopping = false;
             // Game Loop
@@ -67,9 +68,10 @@ namespace IntroAssessment
                     
                     shopping = true;
                     Console.WriteLine("what would you like to buy?");
+                    Console.WriteLine("player gold: " + player.gold);
                     foreach (ShopWeaponsInv tmp in WeaponInShop)
                     {
-                        Console.WriteLine(tmp.Name + ": c" + tmp.Price + " gold");
+                        Console.WriteLine(tmp.Name + ": " + tmp.Price + " gold");
                         
 
                     }
@@ -107,8 +109,20 @@ namespace IntroAssessment
                     string command2 = Console.ReadLine();
                     if(command2 == "ironsword")
                     {
-                        
-                        Console.WriteLine("You bought an iron sword, you are now broke");
+                        bool own = false;
+                        foreach (ShopWeaponsInv tmp in WeaponInShop)
+                        {
+                            if(player.gold >= tmp.Price && own == false)
+                            {
+                                Console.WriteLine("You bought an iron sword, you are now broke");
+                                own = true;
+                            }
+                            else
+                            {
+                                Console.WriteLine("You don't have enough gold");
+                            }
+                        }
+                           
                         
                     }
                     else if (command2 == "leave")
