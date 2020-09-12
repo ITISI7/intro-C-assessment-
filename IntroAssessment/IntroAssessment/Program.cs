@@ -109,21 +109,16 @@ namespace IntroAssessment
                     string command2 = Console.ReadLine();
                     if(command2 == "ironsword")
                     {
-                        bool own = false;
-                        foreach (ShopWeaponsInv tmp in WeaponInShop)
+                        if(player.gold >= 200)
                         {
-                            if(player.gold >= tmp.Price && own == false)
-                            {
-                                Console.WriteLine("You bought an iron sword, you are now broke");
-                                own = true;
-                            }
-                            else
-                            {
-                                Console.WriteLine("You don't have enough gold");
-                            }
+                            Console.WriteLine("You bought an iron sword");
+                            player.gold -= 200;
                         }
-                           
-                        
+                        else
+                        {
+                            Console.WriteLine("You broke");
+                        }
+                       
                     }
                     else if (command2 == "leave")
                     {
