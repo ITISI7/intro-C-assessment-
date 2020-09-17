@@ -113,12 +113,26 @@ namespace IntroAssessment
                         {
                             Console.WriteLine("You bought an iron sword");
                             player.gold -= 200;
+                            Console.WriteLine("You have " + player.gold + " gold left");
                         }
                         else
                         {
                             Console.WriteLine("You broke");
                         }
                        
+                    }
+                    else if(command2 == "steelsword")
+                    {
+                        if(player.gold >= 400)
+                        {
+                            Console.WriteLine("you bought an steel sword");
+                            player.gold -= 400;
+                            Console.WriteLine("You have " + player.gold + " gold left");
+                        }
+                        else
+                        {
+                            Console.WriteLine("You broke");
+                        }
                     }
                     else if (command2 == "leave")
                     {
