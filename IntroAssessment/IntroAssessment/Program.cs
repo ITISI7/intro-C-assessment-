@@ -7,6 +7,7 @@ using System.Globalization;
 using System.Linq;
 using System.Collections.Generic;
 using System.Buffers;
+using System.Security.Cryptography.X509Certificates;
 
 namespace IntroAssessment
 {
@@ -14,21 +15,21 @@ namespace IntroAssessment
     {
         string name;
         public string Name { get => name; set => name = value; }
-    }  
-       
+    }
+
     struct ShopWeaponsInv
     {
         string name;
         int price;
         int damage;
         int weight;
-        
+
         public string Name { get => name; set => name = value; }
         public int Price { get => price; set => price = value; }
         public int Damage { get => damage; set => damage = value; }
         public int Weight { get => weight; set => weight = value; }
 
-        
+
     }
     class Program
     {
@@ -50,29 +51,30 @@ namespace IntroAssessment
                  csv.GetRecords<PlayerInv>();
                 inv = records.ToArray<PlayerInv>();
             }
-            
+
             Player player = new Player();
+            Sword sword = new Sword();
 
 
             Console.WriteLine("Weclome to my shop, what would you like to do?\nbuy \nsell \nleave");
             bool menu = true;
             bool shopping = false;
             // Game Loop
-            while(menu)
+            while (menu)
             {
-               
+
                 string command = Console.ReadLine();
                 // Player Input 
                 if (command == "buy")
                 {
-                    
+
                     shopping = true;
                     Console.WriteLine("what would you like to buy?");
                     Console.WriteLine("player gold: " + player.gold);
                     foreach (ShopWeaponsInv tmp in WeaponInShop)
                     {
                         Console.WriteLine(tmp.Name + ": " + tmp.Price + " gold");
-                        
+
 
                     }
                     menu = false;
@@ -104,44 +106,30 @@ namespace IntroAssessment
                 {
                     Console.WriteLine("invadle");
                 }
-                while(shopping)
+                while (shopping)
                 {
                     string command2 = Console.ReadLine();
-                    if(command2 == "ironsword")
+                    switch (command2)
                     {
-                        if(player.gold >= 200)
-                        {
-                            Console.WriteLine("You bought an iron sword");
-                            player.gold -= 200;
-                            Console.WriteLine("You have " + player.gold + " gold left");
-                        }
-                        else
-                        {
-                            Console.WriteLine("You broke");
-                        }
-                       
+                        case "ironsword":
+                        case "iron sword":
+                            sword.ironSword();
+                            break;
+                        case "steelsword":
+                        case "steel sword":
+                            sword.steelSword();
+                            break;
+                        case "sliversword":
+                        case "sliver sword":
+                            sword.SliverSword();
+                            break;
+
+
                     }
-                    else if(command2 == "steelsword")
-                    {
-                        if(player.gold >= 400)
-                        {
-                            Console.WriteLine("you bought an steel sword");
-                            player.gold -= 400;
-                            Console.WriteLine("You have " + player.gold + " gold left");
-                        }
-                        else
-                        {
-                            Console.WriteLine("You broke");
-                        }
-                    }
-                    else if (command2 == "leave")
-                    {
-                        shopping = false;
-                        menu = true;
-                    }
+
                 }
 
-              }
-          }
+            }
+        }
     }
 }

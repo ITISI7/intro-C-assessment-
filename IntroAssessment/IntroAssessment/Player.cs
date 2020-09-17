@@ -5,7 +5,7 @@ using System.Text;
 
 namespace IntroAssessment
 {
-    class Player
+     class Player
     {
         public int gold = 1000;
         public string inv;
