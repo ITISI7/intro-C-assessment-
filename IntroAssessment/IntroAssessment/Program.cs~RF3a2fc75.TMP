@@ -13,7 +13,7 @@ using System.Runtime.CompilerServices;
 
 namespace IntroAssessment
 {
-
+    // data form file
     struct ShopWeaponsInv
     {
         string name;
