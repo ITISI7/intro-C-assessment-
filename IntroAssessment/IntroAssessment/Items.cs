@@ -6,9 +6,24 @@ namespace IntroAssessment
 {
     class Items
     {
-        protected string name;
-        protected int price;
-        protected int seling;
+        public string name;
+        public int price;
+        public int seling;
+
+        Player player = new Player();
+        public void buy(string name, int price)
+        {
+            if (player.gold >= price)
+            {
+                Console.WriteLine("You bought an " + name);
+                player.gold -= price;
+                Console.WriteLine("You have " + player.gold + " gold left");
+            }
+            else
+            {
+                Console.WriteLine("Not enough gold");
+            }
+        }
 
     }
 }

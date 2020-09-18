@@ -1,0 +1,2 @@
+﻿iron sword, 200, 5
+steel sword, 400, 10

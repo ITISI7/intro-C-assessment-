@@ -1,6 +1,7 @@
 ﻿Name,Price,Damage,Weight
 iron Sword,200,5,5
 steel Sword,400,8,10
-sliver Sword,800,10,5
+sliver Sword,800,10,6
 Flaming Rapier,1000,10,2
 iron Greatsword,200,8,10
+steel Greatsword,400,12,20

@@ -1,0 +1,4 @@
+iron sword, 200, 5
+steel sword, 400, 10
+sliver sword, 800,12
+sliver sword, 800,12

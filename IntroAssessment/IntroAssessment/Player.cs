@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace IntroAssessment
@@ -9,6 +10,17 @@ namespace IntroAssessment
     {
         public int gold = 1000;
         public string inv;
+        public string filePath = ("playerInv.csv");
+        public List<string> lines = new List<string>();
+        public void DisplayedInv()
+        {
+            
+            lines = File.ReadAllLines(filePath).ToList();
+            foreach (string line in lines)
+            {
+                Console.WriteLine(line);
+            }
+        }
         
         
     }

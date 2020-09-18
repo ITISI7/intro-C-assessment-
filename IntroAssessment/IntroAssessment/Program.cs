@@ -11,11 +11,6 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace IntroAssessment
 {
-    struct PlayerInv
-    {
-        string name;
-        public string Name { get => name; set => name = value; }
-    }
 
     struct ShopWeaponsInv
     {
@@ -36,7 +31,7 @@ namespace IntroAssessment
         static void Main(string[] args)
         {
             ShopWeaponsInv[] WeaponInShop;
-            PlayerInv[] inv;
+           
             using (var reader = new StreamReader("Weapons.csv"))
             using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
             {
@@ -44,16 +39,10 @@ namespace IntroAssessment
                  csv.GetRecords<ShopWeaponsInv>();
                 WeaponInShop = records.ToArray<ShopWeaponsInv>();
             }
-            using (var reader = new StreamReader("playerinv.csv"))
-            using (var csv = new CsvReader(reader, CultureInfo.InvariantCulture))
-            {
-                System.Collections.Generic.IEnumerable<PlayerInv> records =
-                 csv.GetRecords<PlayerInv>();
-                inv = records.ToArray<PlayerInv>();
-            }
 
             Player player = new Player();
-            Sword sword = new Sword();
+            Items item = new Items();
+            Weapons weapon = new Weapons();
 
 
             Console.WriteLine("Weclome to my shop, what would you like to do?\nbuy \nsell \nleave");
@@ -73,10 +62,12 @@ namespace IntroAssessment
                     Console.WriteLine("player gold: " + player.gold);
                     foreach (ShopWeaponsInv tmp in WeaponInShop)
                     {
-                        Console.WriteLine(tmp.Name + ": " + tmp.Price + " gold");
+                        Console.WriteLine(tmp.Name + ": " + tmp.Price + " gold" );
+                        
 
 
                     }
+                    Console.WriteLine("Type leave to exit buy menu");
                     menu = false;
 
 
@@ -89,16 +80,15 @@ namespace IntroAssessment
                 else if (command == "leave")
                 {
                     Console.WriteLine("do come again");
+                    player.lines.Clear();
+                    File.WriteAllLines(player.filePath, player.lines);
                     menu = false;
 
 
                 }
                 else if (command == "inv")
                 {
-                    foreach (PlayerInv tmp in inv)
-                    {
-                        Console.WriteLine(tmp.Name);
-                    }
+                    player.DisplayedInv();
                     Console.WriteLine("gold: " + player.gold);
                 }
                 // if player type anything that not in the game
@@ -109,19 +99,34 @@ namespace IntroAssessment
                 while (shopping)
                 {
                     string command2 = Console.ReadLine();
+               
                     switch (command2)
                     {
+                        
+                        case "leave":
+                        case "quit":
+                        case "exit":
+                        Console.WriteLine("Do come back soon \nwhat would you like to do now?");
+                        shopping = false;
+                        menu = true;
+                            break;
                         case "ironsword":
                         case "iron sword":
-                            sword.ironSword();
+                        weapon.BuyWeapon("iron sword", 200, 5, 5);
+                        player.lines.Add(weapon.weaponName + " Damage: " + weapon.damage + "   weight:" + weapon.weight);
+                        File.WriteAllLines(player.filePath, player.lines);
                             break;
                         case "steelsword":
                         case "steel sword":
-                            sword.steelSword();
+                        weapon.BuyWeapon("steel sword", 400, 8, 10);
+                        player.lines.Add(weapon.weaponName + " Damage: " + weapon.damage + "   weight:" + weapon.weight);
+                        File.WriteAllLines(player.filePath, player.lines);
                             break;
                         case "sliversword":
                         case "sliver sword":
-                            sword.SliverSword();
+                            weapon.BuyWeapon("sliver sword", 400, 8, 10);
+                            player.lines.Add(weapon.weaponName + " Damage: " + weapon.damage + "   weight:" + weapon.weight);
+                            File.WriteAllLines(player.filePath, player.lines);
                             break;
 
 

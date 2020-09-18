@@ -1,0 +1,13 @@
+C:\Users\7319d\source\repos\intro-C-assessment-\fileTesting\fileTesting\bin\Debug\netcoreapp3.1\fileTesting.exe
+C:\Users\7319d\source\repos\intro-C-assessment-\fileTesting\fileTesting\bin\Debug\netcoreapp3.1\fileTesting.deps.json
+C:\Users\7319d\source\repos\intro-C-assessment-\fileTesting\fileTesting\bin\Debug\netcoreapp3.1\fileTesting.runtimeconfig.json
+C:\Users\7319d\source\repos\intro-C-assessment-\fileTesting\fileTesting\bin\Debug\netcoreapp3.1\fileTesting.runtimeconfig.dev.json
+C:\Users\7319d\source\repos\intro-C-assessment-\fileTesting\fileTesting\bin\Debug\netcoreapp3.1\fileTesting.dll
+C:\Users\7319d\source\repos\intro-C-assessment-\fileTesting\fileTesting\bin\Debug\netcoreapp3.1\fileTesting.pdb
+C:\Users\7319d\source\repos\intro-C-assessment-\fileTesting\fileTesting\obj\Debug\netcoreapp3.1\fileTesting.AssemblyInfoInputs.cache
+C:\Users\7319d\source\repos\intro-C-assessment-\fileTesting\fileTesting\obj\Debug\netcoreapp3.1\fileTesting.AssemblyInfo.cs
+C:\Users\7319d\source\repos\intro-C-assessment-\fileTesting\fileTesting\obj\Debug\netcoreapp3.1\fileTesting.csproj.CoreCompileInputs.cache
+C:\Users\7319d\source\repos\intro-C-assessment-\fileTesting\fileTesting\obj\Debug\netcoreapp3.1\fileTesting.dll
+C:\Users\7319d\source\repos\intro-C-assessment-\fileTesting\fileTesting\obj\Debug\netcoreapp3.1\fileTesting.pdb
+C:\Users\7319d\source\repos\intro-C-assessment-\fileTesting\fileTesting\obj\Debug\netcoreapp3.1\fileTesting.genruntimeconfig.cache
+C:\Users\7319d\source\repos\intro-C-assessment-\fileTesting\fileTesting\bin\Debug\netcoreapp3.1\TextFile1.txt
