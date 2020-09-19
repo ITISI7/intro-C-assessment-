@@ -16,3 +16,4 @@ C:\Users\7319d\Source\Repos\intro-C-assessment-\IntroAssessment\IntroAssessment\
 C:\Users\7319d\source\repos\intro-C-assessment-\IntroAssessment\IntroAssessment\bin\Debug\netcoreapp3.1\Weapons.csv
 C:\Users\7319d\source\repos\intro-C-assessment-\IntroAssessment\IntroAssessment\bin\Debug\netcoreapp3.1\Program.cs
 C:\Users\7319d\source\repos\intro-C-assessment-\IntroAssessment\IntroAssessment\bin\Debug\netcoreapp3.1\playerInv.csv
+C:\Users\7319d\Source\Repos\intro-C-assessment-\IntroAssessment\IntroAssessment\bin\Debug\netcoreapp3.1\potions.csv

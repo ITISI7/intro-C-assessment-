@@ -19,6 +19,9 @@
     <None Update="playerInv.csv">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    <None Update="potions.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Update="Weapons.csv">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

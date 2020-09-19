@@ -5,34 +5,29 @@ using System.Text;
 
 namespace IntroAssessment
 {
-    class Weapons : Items
+    class potions : Items
     {
-        
-        public int damage;
-        public int weight;
         Player player = new Player();
-
-        // to get data input from main and assign it 
-        public void BuyWeapon(string name, int price, int weaponDamage, int weaponWeight)
+        public string potionEffect;
+        public void BuyPotions(string name, int price, string effect )
         {
             if (player.gold >= price)
             {
                 Console.WriteLine("You bought an " + name);
                 player.gold -= price;
                 Console.WriteLine("You have " + player.gold + " gold left");
+                potionEffect = effect;
                 itemName = name;
-                damage = weaponDamage;
-                weight = weaponWeight;
             }
             else
             {
                 Console.WriteLine("Not enough gold");
             }
-            
+
         }
-        public void WriteWeaponintoFile()
+        public void WritePotionintoFile()
         {
-            player.lines.Add(itemName + " Damage:" + damage + "   weight:" + weight);
+            player.lines.Add(itemName + " Effect:" + potionEffect );
             File.WriteAllLines(player.filePath, player.lines);
         }
 

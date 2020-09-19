@@ -6,7 +6,7 @@ namespace IntroAssessment
 {
     class Items
     {
-        public string name;
+        public string itemName;
         public int price;
         public int seling;
 
