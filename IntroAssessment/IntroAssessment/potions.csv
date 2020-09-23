@@ -1,2 +1,6 @@
 ﻿Name,Price,Effect
-health potion, 50, heals for 1-hp
+health potion, 50, heals for 10 hp
+magic potion,50, recover 10 mp
+strength potion,100, increase strength by 5
+defense potion,100, increase defense by 5
+speed potion, 100, increase speed by 5

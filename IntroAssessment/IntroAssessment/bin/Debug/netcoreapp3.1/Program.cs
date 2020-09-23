@@ -77,7 +77,7 @@ namespace IntroAssessment
             Console.WriteLine("Weclome to my shop, what would you like to do?\ntype help for help");
             while (menu)
             {
-
+               
 
                 string command = Console.ReadLine();
                 // Player Input 
@@ -115,6 +115,11 @@ namespace IntroAssessment
                 else if (command == "help")
                 {
                     Console.WriteLine("Your options are:\nbuy \nsell \ninv \nleave");
+                }
+                else if(command == "add gold")
+                {
+                    Console.WriteLine("1000 gold was added to your inv");
+                    player.gold += 1000;
                 }
                 // if player type anything that not in the game
                 else
@@ -180,35 +185,59 @@ namespace IntroAssessment
                         case "ironsword":
                         case "iron sword":
                             // to give data to Buyweapon method
-                            weapon.BuyWeapon("iron sword", 200, 5, 5);
+                            weapon.BuyWeapon(0, 200, 5, 5);
                             // to write into playerInv.csv file
                             weapon.WriteWeaponintoFile();
                             break;
                         case "steelsword":
                         case "steel sword":
-                            weapon.BuyWeapon("steel sword", 400, 8, 10);
+                            weapon.BuyWeapon(1, 400, 8, 10);
                             weapon.WriteWeaponintoFile();
                             break;
                         case "sliversword":
                         case "sliver sword":
-                            weapon.BuyWeapon("sliver sword", 400, 8, 10);
+                            weapon.BuyWeapon(2, 400, 8, 10);
                             weapon.WriteWeaponintoFile();
                             break;
                         case "flamingrapier":
                         case "flaming rapier":
-                            weapon.BuyWeapon("flamming rapier", 1000, 10, 2);
+                            weapon.BuyWeapon(3, 1000, 10, 2);
                             weapon.WriteWeaponintoFile();
                             break;
                         case "voidsword":
                         case "void sword":
-                            weapon.BuyWeapon("void sword", 1000, 15, 5);
+                            weapon.BuyWeapon(4, 1000, 15, 5);
+                            weapon.WriteWeaponintoFile();
+                            break;
+                        case "muramasa":
+                            weapon.BuyWeapon(5, 1300, 18, 3);
+                            weapon.WriteWeaponintoFile();
+                            break;
+                        case "nightedge":
+                        case "night edge":
+                            weapon.BuyWeapon(6, 1200, 20, 8);
                             weapon.WriteWeaponintoFile();
                             break;
                         case "irongreatsword":
                         case "iron greatsword":
-                            weapon.BuyWeapon("iron greatsword", 200, 8, 10);
+                            weapon.BuyWeapon(7, 200, 8, 10);
                             weapon.WriteWeaponintoFile();
                             break;
+                        case "steelgreatsword":
+                        case "steel greatsword":
+                            weapon.BuyWeapon(8, 400, 13, 20);
+                            weapon.WriteWeaponintoFile();
+                            break;
+                        case "slivergreatsword":
+                        case "sliver greatsword":
+                            weapon.BuyWeapon(9, 800, 16, 12);
+                            weapon.WriteWeaponintoFile();
+                            break;
+                        case "excalibur":
+                            weapon.BuyWeapon(10, 1500, 30, 20);
+                            weapon.WriteWeaponintoFile();
+                            break;
+
 
                     }
 
@@ -227,7 +256,7 @@ namespace IntroAssessment
                             break;
                         case "healthpotion":
                         case "health potion":
-                            potion.BuyPotions("Health Potioin", 50, "Heals for 10 hp");
+                            potion.BuyPotions(0, 50, "Heals for 10 hp");
                             potion.WritePotionintoFile();
                             break;
                     }

@@ -8,7 +8,7 @@ namespace IntroAssessment
 {
      class Player
     {
-        public int gold = 1000;
+        public int gold = 10000;
         public string inv;
         public string filePath = ("playerInv.csv");
         public List<string> lines = new List<string>();

@@ -4,10 +4,7 @@ steel Sword,400,8,10
 sliver Sword,800,10,6
 Flaming Rapier,1000,10,2
 void sword,1000,15,5
-muramasa,1300,18,3
-night edge,1200,20,8
 iron Greatsword,200,8,10
 steel Greatsword,400,13,20
-sliver Greatsword,800,16,12
-excalibur,1500,30,20
+sliver Greatsword,800,60,12
 
