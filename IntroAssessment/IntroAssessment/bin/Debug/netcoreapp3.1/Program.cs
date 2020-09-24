@@ -259,6 +259,26 @@ namespace IntroAssessment
                             potion.BuyPotions(0, 50, "Heals for 10 hp");
                             potion.WritePotionintoFile();
                             break;
+                        case "magic potion":
+                        case "magicpotion":
+                            potion.BuyPotions(1, 50, "recover 10 mp");
+                            potion.WritePotionintoFile();
+                            break;
+                        case "strengthpotion":
+                        case "strength potion":
+                            potion.BuyPotions(2, 100, "increase strength by 5");
+                            potion.WritePotionintoFile();
+                            break;
+                        case "defensepotion":
+                        case "defense potion":
+                            potion.BuyPotions(3, 100, "increase defense by 5");
+                            potion.WritePotionintoFile();
+                            break;
+                        case "speedpotion":
+                        case "speed potion":
+                            potion.BuyPotions(4, 100, "increase speed by 5");
+                            potion.WritePotionintoFile();
+                            break;
                     }
                 }
             }

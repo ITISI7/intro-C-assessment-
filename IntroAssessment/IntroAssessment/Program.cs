@@ -101,6 +101,7 @@ namespace IntroAssessment
                 else if (command == "leave")
                 {
                     Console.WriteLine("do come again");
+                    // clear everything from playerinv file when you quit the game
                     player.lines.Clear();
                     File.WriteAllLines(player.filePath, player.lines);
                     menu = false;

@@ -9,17 +9,20 @@ namespace IntroAssessment
     {
         Player player = new Player();
         public string potionEffect;
+        //array of all potions item
         public string[] name =
         {
             "health potion","magic potion","strength potion","defense potion","speed potion",
         };
-        public void BuyPotions(int potionName, int price, string effect )
+        //to get data input from main and assign it
+        public void BuyPotions(int potionName, int potionsPrice, string effect )
         {
-            if (player.gold >= price)
+            if (player.gold >= potionsPrice)
             {
+                price = potionsPrice;
                 potionEffect = effect;
                 itemName = name[potionName];
-                Console.WriteLine("You bought an " + itemName);
+                Console.WriteLine("You bought an " + itemName + " for " + price + " gold");
                 player.gold -= price;
                 Console.WriteLine("You have " + player.gold + " gold left");
                 
@@ -30,6 +33,7 @@ namespace IntroAssessment
             }
 
         }
+        // method for wtriting into a file
         public void WritePotionintoFile()
         {
             player.lines.Add(itemName + "   Effect: " + potionEffect );

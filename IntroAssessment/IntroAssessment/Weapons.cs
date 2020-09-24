@@ -10,6 +10,7 @@ namespace IntroAssessment
         
         public int damage;
         public int weight;
+        // arrays of all weapons item
         public string[] name =
         {
             "iron sword", "steel sword","sliver sword", "flaming rapier", "void sword",
@@ -23,16 +24,17 @@ namespace IntroAssessment
         
 
         // to get data input from main and assign it 
-        public void BuyWeapon(int weaponName, int price, int weaponDamage, int weaponWeight)
+        public void BuyWeapon(int weaponName, int weaponsPrice, int weaponDamage, int weaponWeight)
         {
 
 
-            if (player.gold >= price)
+            if (player.gold >= weaponsPrice)
             {
+                price = weaponsPrice;
                 itemName = name[weaponName];
                 damage = weaponDamage;
                 weight = weaponWeight;
-                Console.WriteLine("You bought an " + itemName);
+                Console.WriteLine("You bought an " + itemName + " for " + price + " gold");
                 player.gold -= price;
                 Console.WriteLine("You have " + player.gold + " gold left");
 
@@ -43,6 +45,7 @@ namespace IntroAssessment
             }
             
         }
+        // method for wtriting into a file
         public void WriteWeaponintoFile()
         {
             player.lines.Add(itemName + " Damage:" + damage + "   weight:" + weight);

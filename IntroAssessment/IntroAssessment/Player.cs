@@ -12,6 +12,7 @@ namespace IntroAssessment
         public string inv;
         public string filePath = ("playerInv.csv");
         public List<string> lines = new List<string>();
+        // display text from playerinv file
         public void DisplayedInv()
         {
             
