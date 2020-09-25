@@ -83,53 +83,53 @@ namespace IntroAssessment
 
                 string command = Console.ReadLine();
                 // Player Input 
-                if (command == "buy" || command == "purchase")
+                switch(command)
                 {
-
-                    shopping = true;
-                    Console.WriteLine("what would you like to buy?");
-                    Console.WriteLine("player gold: " + player.gold);
-                    Console.WriteLine("Weapons \nPotions \nleave");
-
-                    menu = false;
-
+                    // bring you to weapons/potions menu
+                    case "buy":
+                    case "purchase":
+                        shopping = true;
+                        Console.WriteLine("what would you like to buy?");
+                        Console.WriteLine("player gold: " + player.gold);
+                        Console.WriteLine("Weapons \nPotions \nleave");
+                        menu = false;
+                        break;
+                    case "sell":
+                        Console.WriteLine("what would you like to sell?");
+                        break;
+                        // to quit game
+                    case "leave":
+                    case "quit":
+                    case "exit":
+                        Console.WriteLine("do come again");
+                        // clear everything from playerinv file when you quit the game
+                        player.lines.Clear();
+                        File.WriteAllLines(player.filePath, player.lines);
+                        menu = false;
+                        break;
+                        // to check player inv, both items bought and gold
+                     case "inv":
+                     case "inventory":
+                     case "bag":
+                        Console.WriteLine("gold: " + player.gold);
+                        player.DisplayedInv();
+                        break;
+                        //help 
+                    case "help":
+                        Console.WriteLine("Your options are:\nbuy \ninv \nleave");
+                        break;
+                    case "addgold":
+                    case "add gold":
+                        Console.WriteLine("1000 gold was added to your inv");
+                        player.gold += 1000;
+                        break;
+                        // if command does not equal anything above it will print out invalided
+                    default:
+                        Console.WriteLine("invalided");
+                        break;
 
                 }
-                else if (command == "sell")
-                {
-                    Console.WriteLine("what would you like to sell?");
-
-                }
-                else if (command == "leave")
-                {
-                    Console.WriteLine("do come again");
-                    // clear everything from playerinv file when you quit the game
-                    player.lines.Clear();
-                    File.WriteAllLines(player.filePath, player.lines);
-                    menu = false;
-
-
-                }
-                else if (command == "inv" || command == "bag")
-                {
-                    Console.WriteLine("gold: " + player.gold);
-                    player.DisplayedInv();
-                    
-                }
-                else if (command == "help")
-                {
-                    Console.WriteLine("Your options are:\nbuy \nsell \ninv \nleave");
-                }
-                else if(command == "add gold")
-                {
-                    Console.WriteLine("1000 gold was added to your inv");
-                    player.gold += 1000;
-                }
-                // if player type anything that not in the game
-                else
-                {
-                    Console.WriteLine("invalided");
-                }
+                
                 // game loop of buying menu after when player input "buy"
                 while (shopping)
                 {

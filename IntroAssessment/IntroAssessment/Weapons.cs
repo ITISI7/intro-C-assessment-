@@ -14,7 +14,7 @@ namespace IntroAssessment
         public string[] name =
         {
             "iron sword", "steel sword","sliver sword", "flaming rapier", "void sword",
-            "muramasa", "night edge","iron greatsword","steel greatsword", "sliver greatsword",
+            "muramasa", "night edge", "infinity edge","iron greatsword","steel greatsword", "sliver greatsword",
             "excailbur", 
 
         };
