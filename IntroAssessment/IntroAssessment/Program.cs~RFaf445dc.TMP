@@ -118,7 +118,7 @@ namespace IntroAssessment
                 }
                 else if (command == "help")
                 {
-                    Console.WriteLine("Your options are:\nbuy \ninv \nleave");
+                    Console.WriteLine("Your options are:\nbuy \nsell \ninv \nleave");
                 }
                 else if(command == "add gold")
                 {
@@ -128,7 +128,7 @@ namespace IntroAssessment
                 // if player type anything that not in the game
                 else
                 {
-                    Console.WriteLine("invalided");
+                    Console.WriteLine("invadle");
                 }
                 // game loop of buying menu after when player input "buy"
                 while (shopping)
@@ -154,7 +154,7 @@ namespace IntroAssessment
                             {
                                 Console.WriteLine(tmp.Name + ": " + tmp.Price + " gold");
                             }
-                            Console.WriteLine("type quit to exit weapons shop menu");
+                            Console.WriteLine("type leave to exit weapons shop menu");
                             break;
                         case "potions":
                             buyPotions = true;
@@ -164,12 +164,8 @@ namespace IntroAssessment
                             {
                                 Console.WriteLine(tmp.Name + ": " + tmp.Price + " gold");
                             }
-                            Console.WriteLine("Type quit to exit potion shop");
+                            Console.WriteLine("Type leave to exit potion shop");
                             break;
-                        default:
-                            Console.WriteLine("invalided");
-                            break;
-
 
                     }
 
@@ -245,9 +241,7 @@ namespace IntroAssessment
                             weapon.BuyWeapon(10, 1500, 30, 20);
                             weapon.WriteWeaponintoFile();
                             break;
-                        default:
-                            Console.WriteLine("invalided");
-                            break;
+
 
                     }
 
@@ -294,10 +288,6 @@ namespace IntroAssessment
                             potion.BuyPotions(5, 200, "turn invisibility for 20 second");
                             potion.WritePotionintoFile();
                             break;
-                        default:
-                            Console.WriteLine("invalided");
-                            break;
-
                     }
                 }
             }

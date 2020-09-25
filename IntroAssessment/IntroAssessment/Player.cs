@@ -8,8 +8,10 @@ namespace IntroAssessment
 {
      class Player
     {
+        public int hp;
+        public int mp;
         public int gold = 10000;
-        public string inv;
+        
         public string filePath = ("playerInv.csv");
         public List<string> lines = new List<string>();
         // display text from playerinv file
