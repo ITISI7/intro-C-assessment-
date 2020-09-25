@@ -73,15 +73,17 @@ namespace IntroAssessment
             bool shopping = false;
             bool buyWeapons = false;
             bool buyPotions = false;
+            
             // menu game loop
             Console.WriteLine("Weclome to my shop, what would you like to do?\ntype help for help");
+            
             while (menu)
             {
-               
+
 
                 string command = Console.ReadLine();
                 // Player Input 
-                if (command == "buy")
+                if (command == "buy" || command == "purchase")
                 {
 
                     shopping = true;
@@ -110,8 +112,9 @@ namespace IntroAssessment
                 }
                 else if (command == "inv" || command == "bag")
                 {
-                    player.DisplayedInv();
                     Console.WriteLine("gold: " + player.gold);
+                    player.DisplayedInv();
+                    
                 }
                 else if (command == "help")
                 {
@@ -131,7 +134,7 @@ namespace IntroAssessment
                 while (shopping)
                 {
                     string command2 = Console.ReadLine();
-
+                    
                     switch (command2)
                     {
                         // leave shop menu to main menu
@@ -280,10 +283,15 @@ namespace IntroAssessment
                             potion.BuyPotions(4, 100, "increase speed by 5");
                             potion.WritePotionintoFile();
                             break;
+                        case "invisibilitypotion":
+                        case "invisibility potion":
+                            potion.BuyPotions(5, 200, "turn invisibility for 20 second");
+                            potion.WritePotionintoFile();
+                            break;
                     }
                 }
             }
-        }
+        }                                    
     }
 }
 

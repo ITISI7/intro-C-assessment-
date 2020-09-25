@@ -112,8 +112,9 @@ namespace IntroAssessment
                 }
                 else if (command == "inv" || command == "bag")
                 {
-                    player.DisplayedInv();
                     Console.WriteLine("gold: " + player.gold);
+                    player.DisplayedInv();
+                    
                 }
                 else if (command == "help")
                 {

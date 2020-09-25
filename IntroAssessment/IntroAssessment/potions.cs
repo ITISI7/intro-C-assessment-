@@ -13,6 +13,7 @@ namespace IntroAssessment
         public string[] name =
         {
             "health potion","magic potion","strength potion","defense potion","speed potion",
+            "invisibility potion"
         };
         //to get data input from main and assign it
         public void BuyPotions(int potionName, int potionsPrice, string effect )

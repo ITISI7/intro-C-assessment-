@@ -4,3 +4,4 @@ magic potion,50, recover 10 mp
 strength potion,100, increase strength by 5
 defense potion,100, increase defense by 5
 speed potion, 100, increase speed by 5
+invisibility potion, 200, turn invisibility for 20 seconds
