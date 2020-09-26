@@ -226,23 +226,28 @@ namespace IntroAssessment
                             weapon.BuyWeapon(6, 1200, 20, 8);
                             weapon.WriteWeaponintoFile();
                             break;
+                        case "infinityedge":
+                        case "infinity edge":
+                            weapon.BuyWeapon(7, 1200, 18, 5);
+                            weapon.WriteWeaponintoFile();
+                            break;
                         case "irongreatsword":
                         case "iron greatsword":
-                            weapon.BuyWeapon(7, 200, 8, 10);
+                            weapon.BuyWeapon(8, 200, 8, 10);
                             weapon.WriteWeaponintoFile();
                             break;
                         case "steelgreatsword":
                         case "steel greatsword":
-                            weapon.BuyWeapon(8, 400, 13, 20);
+                            weapon.BuyWeapon(9, 400, 13, 20);
                             weapon.WriteWeaponintoFile();
                             break;
                         case "slivergreatsword":
                         case "sliver greatsword":
-                            weapon.BuyWeapon(9, 800, 16, 12);
+                            weapon.BuyWeapon(10, 800, 16, 12);
                             weapon.WriteWeaponintoFile();
                             break;
                         case "excalibur":
-                            weapon.BuyWeapon(10, 1500, 30, 20);
+                            weapon.BuyWeapon(11, 1500, 30, 20);
                             weapon.WriteWeaponintoFile();
                             break;
                         default:

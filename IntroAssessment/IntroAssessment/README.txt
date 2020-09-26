@@ -19,5 +19,6 @@ type quit to return back to main menu.
 
 Created by David Tounn
 
+Github link: https://github.com/ITISI7/intro-C-assessment-
 
 
